@@ -13,9 +13,10 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#080914;
   color:#fff;
+  min-height:100vh;
 }
 
 .container{
@@ -24,6 +25,7 @@ body{
   margin:auto;
 }
 
+/* Header */
 header{
   display:flex;
   justify-content:space-between;
@@ -40,13 +42,24 @@ header{
   color:#c56cff;
 }
 
-.login{
-  text-decoration:none;
+button{
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.login-btn{
+  background:transparent;
   color:#fff;
   border:1px solid #777;
   padding:12px 22px;
   border-radius:14px;
+  font-size:16px;
   font-weight:bold;
+}
+
+/* Home */
+#homePage{
+  display:block;
 }
 
 .hero{
@@ -69,7 +82,7 @@ header{
 }
 
 .hero p{
-  color:#b9b9c9;
+  color:#b9b9c8;
   font-size:18px;
   line-height:1.7;
   max-width:650px;
@@ -84,103 +97,191 @@ header{
   flex-wrap:wrap;
 }
 
-.btn{
-  display:inline-block;
-  padding:16px 30px;
-  border-radius:15px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:16px;
-}
-
 .primary{
   background:#c56cff;
-  color:#090914;
+  color:#080914;
+  border:none;
+  padding:17px 30px;
+  border-radius:16px;
+  font-size:17px;
+  font-weight:bold;
 }
 
 .secondary{
-  color:white;
+  background:transparent;
+  color:#fff;
   border:1px solid #666;
+  padding:17px 30px;
+  border-radius:16px;
+  font-size:17px;
+  font-weight:bold;
 }
 
-.section{
-  padding:65px 0;
+/* Services */
+.services{
+  padding:70px 0;
 }
 
-.section-title{
+.services h2{
   text-align:center;
-  font-size:34px;
+  font-size:35px;
   margin-bottom:35px;
 }
 
-.services{
+.service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
-.card{
+.service{
   background:#111225;
   border:1px solid #292b48;
   border-radius:22px;
-  padding:28px;
-  transition:.2s;
+  padding:30px 20px;
+  text-align:center;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  border-color:#c56cff;
+.service .icon{
+  font-size:42px;
+  margin-bottom:15px;
 }
 
-.icon{
-  font-size:35px;
-  margin-bottom:18px;
-}
-
-.card h3{
+.service h3{
   font-size:21px;
   margin-bottom:10px;
 }
 
-.card p{
-  color:#999caf;
+.service p{
+  color:#aaaabd;
   line-height:1.6;
 }
 
-.stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:20px;
+/* Auth */
+#authPage{
+  display:none;
+  min-height:85vh;
+  align-items:center;
+  justify-content:center;
 }
 
-.stat{
+.auth-box{
+  width:100%;
+  max-width:430px;
+  background:linear-gradient(145deg,#21133a,#11162f);
+  border:1px solid #40375b;
+  border-radius:28px;
+  padding:35px 25px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.auth-logo{
   text-align:center;
-  padding:25px;
-  border-radius:20px;
-  background:#111225;
-  border:1px solid #292b48;
-}
-
-.stat h2{
-  color:#c56cff;
   font-size:30px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.auth-logo span{
+  color:#c56cff;
+}
+
+.auth-subtitle{
+  text-align:center;
+  color:#9999ad;
+  margin-bottom:25px;
+}
+
+.tabs{
+  display:flex;
+  gap:10px;
+  margin-bottom:25px;
+}
+
+.tab{
+  flex:1;
+  padding:13px;
+  border-radius:12px;
+  border:1px solid #44455e;
+  background:transparent;
+  color:#fff;
+  font-weight:bold;
+}
+
+.tab.active{
+  background:#c56cff;
+  color:#080914;
+  border-color:#c56cff;
+}
+
+.form-group{
+  margin-bottom:17px;
+}
+
+.form-group label{
+  display:block;
   margin-bottom:7px;
+  color:#ddd;
+  font-size:14px;
 }
 
-.stat p{
-  color:#aaa;
+.form-group input{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #41435c;
+  background:#0b0d1c;
+  color:#fff;
+  outline:none;
+  font-size:15px;
 }
 
+.form-group input:focus{
+  border-color:#c56cff;
+}
+
+.auth-submit{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:13px;
+  background:#c56cff;
+  color:#080914;
+  font-size:17px;
+  font-weight:bold;
+  margin-top:5px;
+}
+
+.back-btn{
+  display:block;
+  width:100%;
+  margin-top:15px;
+  padding:13px;
+  border-radius:13px;
+  border:1px solid #55566e;
+  background:transparent;
+  color:#fff;
+  font-weight:bold;
+}
+
+.message{
+  text-align:center;
+  margin-top:15px;
+  color:#c56cff;
+  font-size:14px;
+}
+
+/* Footer */
 footer{
   text-align:center;
-  padding:35px 0;
-  border-top:1px solid #202137;
-  color:#777b91;
+  padding:30px 0;
+  color:#77788d;
+  border-top:1px solid #1b1d30;
+  margin-top:30px;
 }
 
-@media(max-width:700px){
-
+/* Mobile */
+@media(max-width:750px){
   .hero{
     margin-top:25px;
     padding:50px 20px;
@@ -190,20 +291,20 @@ footer{
     font-size:38px;
   }
 
-  .hero p{
-    font-size:17px;
-  }
-
-  .services{
+  .service-grid{
     grid-template-columns:1fr;
   }
 
-  .stats{
-    grid-template-columns:1fr;
+  header{
+    padding:20px 0;
   }
 
-  .section-title{
-    font-size:30px;
+  .logo{
+    font-size:25px;
+  }
+
+  .login-btn{
+    padding:10px 17px;
   }
 }
 </style>
@@ -215,121 +316,347 @@ footer{
 
 <header>
   <div class="logo">Aplora<span>BD</span></div>
-  <a href="#" class="login">Login</a>
+
+  <button class="login-btn" onclick="showLogin()">
+    Login
+  </button>
 </header>
 
-<section class="hero">
 
-  <h1>
-    Grow Your <span>Social<br>Media</span>
-  </h1>
+<!-- HOME PAGE -->
+<section id="homePage">
 
-  <p>
-    Affordable social media services with fast ordering,
-    easy management and reliable support.
-  </p>
+  <div class="hero">
 
-  <div class="buttons">
-    <a href="#" class="btn primary">Get Started</a>
-    <a href="#services" class="btn secondary">View Services</a>
+    <h1>
+      Grow Your <span>Social<br>Media</span>
+    </h1>
+
+    <p>
+      Affordable social media services with fast delivery,
+      easy ordering and reliable support.
+    </p>
+
+    <div class="buttons">
+      <button class="primary" onclick="showRegister()">
+        Get Started
+      </button>
+
+      <button class="secondary" onclick="scrollToServices()">
+        View Services
+      </button>
+    </div>
+
   </div>
 
-</section>
 
-<section class="section" id="services">
+  <div class="services" id="services">
 
-  <h2 class="section-title">Our Services</h2>
+    <h2>Our Services</h2>
 
-  <div class="services">
+    <div class="service-grid">
 
-    <div class="card">
-      <div class="icon">📸</div>
-      <h3>Instagram</h3>
-      <p>
-        Social media services for Instagram accounts,
-        posts and profiles.
-      </p>
-    </div>
+      <div class="service">
+        <div class="icon">📸</div>
+        <h3>Instagram</h3>
+        <p>
+          Social media growth services for Instagram.
+        </p>
+      </div>
 
-    <div class="card">
-      <div class="icon">▶️</div>
-      <h3>YouTube</h3>
-      <p>
-        Services designed to help creators improve
-        their social media presence.
-      </p>
-    </div>
+      <div class="service">
+        <div class="icon">📘</div>
+        <h3>Facebook</h3>
+        <p>
+          Affordable Facebook growth and engagement services.
+        </p>
+      </div>
 
-    <div class="card">
-      <div class="icon">🎵</div>
-      <h3>TikTok</h3>
-      <p>
-        Easy-to-order services for TikTok creators
-        and social media pages.
-      </p>
-    </div>
+      <div class="service">
+        <div class="icon">▶️</div>
+        <h3>YouTube</h3>
+        <p>
+          YouTube-related social media services.
+        </p>
+      </div>
 
-    <div class="card">
-      <div class="icon">📘</div>
-      <h3>Facebook</h3>
-      <p>
-        Social media solutions for Facebook pages
-        and profiles.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">💬</div>
-      <h3>Engagement</h3>
-      <p>
-        Choose from available social media
-        engagement services.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">⚡</div>
-      <h3>Fast Service</h3>
-      <p>
-        Simple ordering experience with clear
-        service information.
-      </p>
     </div>
 
   </div>
 
 </section>
 
-<section class="section">
 
-  <h2 class="section-title">Why AploraBD?</h2>
+<!-- LOGIN / REGISTER PAGE -->
+<section id="authPage">
 
-  <div class="stats">
+  <div class="auth-box">
 
-    <div class="stat">
-      <h2>24/7</h2>
-      <p>Order Access</p>
+    <div class="auth-logo">
+      Aplora<span>BD</span>
     </div>
 
-    <div class="stat">
-      <h2>Easy</h2>
-      <p>Ordering System</p>
+    <div class="auth-subtitle">
+      Welcome back
     </div>
 
-    <div class="stat">
-      <h2>Fast</h2>
-      <p>Support</p>
+    <div class="tabs">
+
+      <button
+        id="loginTab"
+        class="tab active"
+        onclick="showLoginForm()">
+        Login
+      </button>
+
+      <button
+        id="registerTab"
+        class="tab"
+        onclick="showRegisterForm()">
+        Register
+      </button>
+
     </div>
+
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" onsubmit="loginUser(event)">
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Enter your email"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter your password"
+          required>
+      </div>
+
+      <button class="auth-submit" type="submit">
+        Login
+      </button>
+
+    </form>
+
+
+    <!-- REGISTER FORM -->
+    <form
+      id="registerForm"
+      style="display:none"
+      onsubmit="registerUser(event)">
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input
+          type="text"
+          id="registerName"
+          placeholder="Enter your name"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          id="registerEmail"
+          placeholder="Enter your email"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Create a password"
+          minlength="6"
+          required>
+      </div>
+
+      <button class="auth-submit" type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+    <button class="back-btn" onclick="showHome()">
+      ← Back to Home
+    </button>
+
+    <div id="message" class="message"></div>
 
   </div>
 
 </section>
+
 
 <footer>
   © 2026 AploraBD. All rights reserved.
 </footer>
 
 </div>
+
+
+<script>
+
+/* Show Home */
+function showHome(){
+
+  document.getElementById("homePage").style.display="block";
+
+  document.getElementById("authPage").style.display="none";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+
+/* Show Login Page */
+function showLogin(){
+
+  document.getElementById("homePage").style.display="none";
+
+  document.getElementById("authPage").style.display="flex";
+
+  showLoginForm();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+
+/* Show Register Page */
+function showRegister(){
+
+  document.getElementById("homePage").style.display="none";
+
+  document.getElementById("authPage").style.display="flex";
+
+  showRegisterForm();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+
+/* Login Tab */
+function showLoginForm(){
+
+  document.getElementById("loginForm").style.display="block";
+
+  document.getElementById("registerForm").style.display="none";
+
+  document.getElementById("loginTab").classList.add("active");
+
+  document.getElementById("registerTab").classList.remove("active");
+
+  document.getElementById("message").innerText="";
+}
+
+
+/* Register Tab */
+function showRegisterForm(){
+
+  document.getElementById("loginForm").style.display="none";
+
+  document.getElementById("registerForm").style.display="block";
+
+  document.getElementById("loginTab").classList.remove("active");
+
+  document.getElementById("registerTab").classList.add("active");
+
+  document.getElementById("message").innerText="";
+}
+
+
+/* Register */
+function registerUser(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("registerName").value;
+
+  const email =
+    document.getElementById("registerEmail").value;
+
+  const password =
+    document.getElementById("registerPassword").value;
+
+  localStorage.setItem(
+    "aploraUser",
+    JSON.stringify({
+      name:name,
+      email:email,
+      password:password
+    })
+  );
+
+  document.getElementById("message").innerText =
+    "Account created successfully!";
+
+  setTimeout(function(){
+    showLoginForm();
+  },1000);
+}
+
+
+/* Login */
+function loginUser(event){
+
+  event.preventDefault();
+
+  const email =
+    document.getElementById("loginEmail").value;
+
+  const password =
+    document.getElementById("loginPassword").value;
+
+  const savedUser =
+    JSON.parse(localStorage.getItem("aploraUser"));
+
+  if(
+    savedUser &&
+    savedUser.email === email &&
+    savedUser.password === password
+  ){
+
+    document.getElementById("message").innerText =
+      "Login successful!";
+
+  }else{
+
+    document.getElementById("message").innerText =
+      "Invalid email or password.";
+
+  }
+}
+
+
+/* Services */
+function scrollToServices(){
+
+  document.getElementById("services").scrollIntoView({
+    behavior:"smooth"
+  });
+
+}
+
+</script>
 
 </body>
 </html>
