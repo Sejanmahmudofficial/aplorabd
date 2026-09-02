@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AploraBD - Login</title>
+<title>AploraBD - Social Media Services</title>
 
 <style>
 *{
@@ -16,39 +15,181 @@
 body{
   font-family:Arial,sans-serif;
   background:#080914;
-  color:white;
+  color:#fff;
   min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
 }
 
-.box{
-  width:100%;
-  max-width:430px;
-  background:linear-gradient(145deg,#21143a,#11162d);
-  border:1px solid #40375b;
-  border-radius:28px;
-  padding:35px 25px;
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
+.container{
+  width:92%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* Header */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 0;
 }
 
 .logo{
-  text-align:center;
-  font-size:30px;
+  font-size:28px;
   font-weight:800;
-  margin-bottom:8px;
 }
 
 .logo span{
   color:#c56cff;
 }
 
-.subtitle{
+button{
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.login-btn{
+  background:transparent;
+  color:#fff;
+  border:1px solid #777;
+  padding:12px 22px;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* Home */
+#homePage{
+  display:block;
+}
+
+.hero{
+  margin-top:45px;
+  padding:60px 25px;
   text-align:center;
-  color:#999caf;
-  margin-bottom:30px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#24133b,#11162f);
+  border:1px solid #40375b;
+}
+
+.hero h1{
+  font-size:46px;
+  line-height:1.15;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#c56cff;
+}
+
+.hero p{
+  color:#b9b9c8;
+  font-size:18px;
+  line-height:1.7;
+  max-width:650px;
+  margin:auto;
+}
+
+.buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.primary{
+  background:#c56cff;
+  color:#080914;
+  border:none;
+  padding:17px 30px;
+  border-radius:16px;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.secondary{
+  background:transparent;
+  color:#fff;
+  border:1px solid #666;
+  padding:17px 30px;
+  border-radius:16px;
+  font-size:17px;
+  font-weight:bold;
+}
+
+/* Services */
+.services{
+  padding:70px 0;
+}
+
+.services h2{
+  text-align:center;
+  font-size:35px;
+  margin-bottom:35px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service{
+  background:#111225;
+  border:1px solid #292b48;
+  border-radius:22px;
+  padding:30px 20px;
+  text-align:center;
+}
+
+.service .icon{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.service h3{
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.service p{
+  color:#aaaabd;
+  line-height:1.6;
+}
+
+/* Auth */
+#authPage{
+  display:none;
+  min-height:85vh;
+  align-items:center;
+  justify-content:center;
+}
+
+.auth-box{
+  width:100%;
+  max-width:430px;
+  background:linear-gradient(145deg,#21133a,#11162f);
+  border:1px solid #40375b;
+  border-radius:28px;
+  padding:35px 25px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.auth-logo{
+  text-align:center;
+  font-size:30px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.auth-logo span{
+  color:#c56cff;
+}
+
+.auth-subtitle{
+  text-align:center;
+  color:#9999ad;
+  margin-bottom:25px;
 }
 
 .tabs{
@@ -63,161 +204,455 @@ body{
   border-radius:12px;
   border:1px solid #44455e;
   background:transparent;
-  color:white;
+  color:#fff;
   font-weight:bold;
-  cursor:pointer;
 }
 
 .tab.active{
   background:#c56cff;
-  color:#090914;
+  color:#080914;
   border-color:#c56cff;
 }
 
-.form{
-  display:none;
+.form-group{
+  margin-bottom:17px;
 }
 
-.form.active{
+.form-group label{
   display:block;
-}
-
-label{
-  display:block;
-  margin:15px 0 8px;
-  color:#d8d8e2;
+  margin-bottom:7px;
+  color:#ddd;
   font-size:14px;
 }
 
-input{
+.form-group input{
   width:100%;
-  padding:15px;
+  padding:14px;
   border-radius:12px;
-  border:1px solid #393b55;
-  background:#0b0d1b;
-  color:white;
+  border:1px solid #41435c;
+  background:#0b0d1c;
+  color:#fff;
   outline:none;
   font-size:15px;
 }
 
-input:focus{
+.form-group input:focus{
   border-color:#c56cff;
 }
 
-.submit{
+.auth-submit{
   width:100%;
-  margin-top:25px;
   padding:15px;
-  border:0;
+  border:none;
   border-radius:13px;
   background:#c56cff;
-  color:#090914;
-  font-size:16px;
+  color:#080914;
+  font-size:17px;
   font-weight:bold;
-  cursor:pointer;
+  margin-top:5px;
 }
 
-.back{
+.back-btn{
   display:block;
-  text-align:center;
-  margin-top:22px;
-  color:#aaaabd;
-  text-decoration:none;
+  width:100%;
+  margin-top:15px;
+  padding:13px;
+  border-radius:13px;
+  border:1px solid #55566e;
+  background:transparent;
+  color:#fff;
+  font-weight:bold;
 }
 
-.back:hover{
+.message{
+  text-align:center;
+  margin-top:15px;
   color:#c56cff;
+  font-size:14px;
 }
 
-.note{
+/* Footer */
+footer{
   text-align:center;
-  color:#777b91;
-  font-size:12px;
-  margin-top:20px;
-  line-height:1.5;
+  padding:30px 0;
+  color:#77788d;
+  border-top:1px solid #1b1d30;
+  margin-top:30px;
+}
+
+/* Mobile */
+@media(max-width:750px){
+  .hero{
+    margin-top:25px;
+    padding:50px 20px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  header{
+    padding:20px 0;
+  }
+
+  .logo{
+    font-size:25px;
+  }
+
+  .login-btn{
+    padding:10px 17px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-  <div class="logo">
-    Aplora<span>BD</span>
-  </div>
+<header>
+  <div class="logo">Aplora<span>BD</span></div>
 
-  <p class="subtitle">Welcome to your social media panel</p>
+  <button class="login-btn" onclick="showLogin()">
+    Login
+  </button>
+</header>
 
-  <div class="tabs">
-    <button class="tab active" onclick="showForm('login',this)">
-      Login
-    </button>
 
-    <button class="tab" onclick="showForm('register',this)">
-      Register
-    </button>
-  </div>
+<!-- HOME PAGE -->
+<section id="homePage">
 
-  <div id="login" class="form active">
+  <div class="hero">
 
-    <label>Email or Username</label>
-    <input type="text" placeholder="Enter your email or username">
+    <h1>
+      Grow Your <span>Social<br>Media</span>
+    </h1>
 
-    <label>Password</label>
-    <input type="password" placeholder="Enter your password">
+    <p>
+      Affordable social media services with fast delivery,
+      easy ordering and reliable support.
+    </p>
 
-    <button class="submit" onclick="demoMessage()">
-      Login
-    </button>
+    <div class="buttons">
+      <button class="primary" onclick="showRegister()">
+        Get Started
+      </button>
 
-  </div>
-
-  <div id="register" class="form">
-
-    <label>Username</label>
-    <input type="text" placeholder="Choose a username">
-
-    <label>Email</label>
-    <input type="email" placeholder="Enter your email">
-
-    <label>Password</label>
-    <input type="password" placeholder="Create a password">
-
-    <button class="submit" onclick="demoMessage()">
-      Create Account
-    </button>
+      <button class="secondary" onclick="scrollToServices()">
+        View Services
+      </button>
+    </div>
 
   </div>
 
-  <a href="index.html" class="back">
-    ← Back to Home
-  </a>
 
-  <p class="note">
-    Demo interface — real account authentication will be connected later.
-  </p>
+  <div class="services" id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="icon">📸</div>
+        <h3>Instagram</h3>
+        <p>
+          Social media growth services for Instagram.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">📘</div>
+        <h3>Facebook</h3>
+        <p>
+          Affordable Facebook growth and engagement services.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">▶️</div>
+        <h3>YouTube</h3>
+        <p>
+          YouTube-related social media services.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LOGIN / REGISTER PAGE -->
+<section id="authPage">
+
+  <div class="auth-box">
+
+    <div class="auth-logo">
+      Aplora<span>BD</span>
+    </div>
+
+    <div class="auth-subtitle">
+      Welcome back
+    </div>
+
+    <div class="tabs">
+
+      <button
+        id="loginTab"
+        class="tab active"
+        onclick="showLoginForm()">
+        Login
+      </button>
+
+      <button
+        id="registerTab"
+        class="tab"
+        onclick="showRegisterForm()">
+        Register
+      </button>
+
+    </div>
+
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" onsubmit="loginUser(event)">
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Enter your email"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter your password"
+          required>
+      </div>
+
+      <button class="auth-submit" type="submit">
+        Login
+      </button>
+
+    </form>
+
+
+    <!-- REGISTER FORM -->
+    <form
+      id="registerForm"
+      style="display:none"
+      onsubmit="registerUser(event)">
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input
+          type="text"
+          id="registerName"
+          placeholder="Enter your name"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          id="registerEmail"
+          placeholder="Enter your email"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Create a password"
+          minlength="6"
+          required>
+      </div>
+
+      <button class="auth-submit" type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+    <button class="back-btn" onclick="showHome()">
+      ← Back to Home
+    </button>
+
+    <div id="message" class="message"></div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 AploraBD. All rights reserved.
+</footer>
 
 </div>
 
+
 <script>
 
-function showForm(id,button){
+/* Show Home */
+function showHome(){
 
-  document.querySelectorAll('.form')
-    .forEach(form => form.classList.remove('active'));
+  document.getElementById("homePage").style.display="block";
 
-  document.querySelectorAll('.tab')
-    .forEach(tab => tab.classList.remove('active'));
+  document.getElementById("authPage").style.display="none";
 
-  document.getElementById(id).classList.add('active');
-
-  button.classList.add('active');
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 }
 
-function demoMessage(){
 
-  alert("Login/Register system will be connected after the backend is added.");
+/* Show Login Page */
+function showLogin(){
+
+  document.getElementById("homePage").style.display="none";
+
+  document.getElementById("authPage").style.display="flex";
+
+  showLoginForm();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+
+/* Show Register Page */
+function showRegister(){
+
+  document.getElementById("homePage").style.display="none";
+
+  document.getElementById("authPage").style.display="flex";
+
+  showRegisterForm();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+
+/* Login Tab */
+function showLoginForm(){
+
+  document.getElementById("loginForm").style.display="block";
+
+  document.getElementById("registerForm").style.display="none";
+
+  document.getElementById("loginTab").classList.add("active");
+
+  document.getElementById("registerTab").classList.remove("active");
+
+  document.getElementById("message").innerText="";
+}
+
+
+/* Register Tab */
+function showRegisterForm(){
+
+  document.getElementById("loginForm").style.display="none";
+
+  document.getElementById("registerForm").style.display="block";
+
+  document.getElementById("loginTab").classList.remove("active");
+
+  document.getElementById("registerTab").classList.add("active");
+
+  document.getElementById("message").innerText="";
+}
+
+
+/* Register */
+function registerUser(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("registerName").value;
+
+  const email =
+    document.getElementById("registerEmail").value;
+
+  const password =
+    document.getElementById("registerPassword").value;
+
+  localStorage.setItem(
+    "aploraUser",
+    JSON.stringify({
+      name:name,
+      email:email,
+      password:password
+    })
+  );
+
+  document.getElementById("message").innerText =
+    "Account created successfully!";
+
+  setTimeout(function(){
+    showLoginForm();
+  },1000);
+}
+
+
+/* Login */
+function loginUser(event){
+
+  event.preventDefault();
+
+  const email =
+    document.getElementById("loginEmail").value;
+
+  const password =
+    document.getElementById("loginPassword").value;
+
+  const savedUser =
+    JSON.parse(localStorage.getItem("aploraUser"));
+
+  if(
+    savedUser &&
+    savedUser.email === email &&
+    savedUser.password === password
+  ){
+
+    document.getElementById("message").innerText =
+      "Login successful!";
+
+  }else{
+
+    document.getElementById("message").innerText =
+      "Invalid email or password.";
+
+  }
+}
+
+
+/* Services */
+function scrollToServices(){
+
+  document.getElementById("services").scrollIntoView({
+    behavior:"smooth"
+  });
 
 }
 
