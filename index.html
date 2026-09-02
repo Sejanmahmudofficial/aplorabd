@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AploraBD - SMM Panel</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #080914;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #c77dff;
+    }
+
+    .login {
+      border: 1px solid #777;
+      padding: 10px 18px;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      margin-top: 35px;
+      padding: 50px 25px;
+      text-align: center;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #24133b, #11162f);
+      border: 1px solid #40375b;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #c77dff;
+    }
+
+    .hero p {
+      color: #b9b9c8;
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 14px;
+      text-decoration: none;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #c77dff;
+      color: #100718;
+    }
+
+    .secondary {
+      border: 1px solid #625878;
+      color: white;
+    }
+
+    .services {
+      margin-top: 40px;
+    }
+
+    .services h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 25px;
+      border-radius: 20px;
+      background: #121425;
+      border: 1px solid #292d49;
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #999caf;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 0 25px;
+      color: #777b91;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding: 40px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="logo">Aplora<span>BD</span></div>
+      <a href="#" class="login">Login</a>
+    </header>
+
+    <section class="hero">
+      <h1>Grow Your <span>Social Media</span></h1>
+
+      <p>
+        Affordable social media services with fast delivery,
+        easy ordering and reliable support.
+      </p>
+
+      <div class="buttons">
+        <a href="#" class="btn primary">Get Started</a>
+        <a href="#" class="btn secondary">View Services</a>
+      </div>
+    </section>
+
+    <section class="services">
+      <h2>Our Services</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">📸</div>
+          <h3>Instagram</h3>
+          <p>Followers, Likes and Views services.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">▶️</div>
+          <h3>YouTube</h3>
+          <p>Views, Likes and Subscribers services.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎵</div>
+          <h3>TikTok</h3>
+          <p>Followers, Likes and Views services.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📘</div>
+          <h3>Facebook</h3>
+          <p>Followers, Likes and Engagement services.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      © 2026 AploraBD. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
