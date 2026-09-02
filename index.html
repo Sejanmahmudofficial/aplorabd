@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AploraBD - SMM Panel</title>
+<title>AploraBD - Social Media Services</title>
 
 <style>
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
-  font-family:Arial,sans-serif;
 }
 
 body{
+  font-family:Arial, sans-serif;
   background:#080914;
-  color:white;
-  min-height:100vh;
+  color:#fff;
 }
 
 .container{
@@ -26,1332 +24,312 @@ body{
   margin:auto;
 }
 
-/* HEADER */
-
 header{
-  padding:22px 0;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:25px 0;
 }
 
 .logo{
-  font-size:25px;
-  font-weight:bold;
+  font-size:28px;
+  font-weight:800;
 }
 
 .logo span{
-  color:#c77dff;
+  color:#c56cff;
 }
 
-.header-buttons{
-  display:flex;
-  gap:10px;
-}
-
-.header-btn{
-  padding:10px 18px;
-  border-radius:12px;
-  font-weight:bold;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.login-btn{
-  background:transparent;
+.login{
+  text-decoration:none;
+  color:#fff;
   border:1px solid #777;
-  color:white;
+  padding:12px 22px;
+  border-radius:14px;
+  font-weight:bold;
 }
-
-.signup-btn{
-  background:#c77dff;
-  border:1px solid #c77dff;
-  color:#100718;
-}
-
-/* HERO */
 
 .hero{
-  margin-top:35px;
-  padding:50px 25px;
+  margin-top:45px;
+  padding:60px 25px;
   text-align:center;
-  border-radius:28px;
+  border-radius:30px;
   background:linear-gradient(135deg,#24133b,#11162f);
   border:1px solid #40375b;
 }
 
 .hero h1{
-  font-size:42px;
-  margin-bottom:18px;
+  font-size:46px;
+  line-height:1.15;
+  margin-bottom:20px;
 }
 
 .hero h1 span{
-  color:#c77dff;
+  color:#c56cff;
 }
 
 .hero p{
-  color:#b9b9c8;
-  font-size:17px;
+  color:#b9b9c9;
+  font-size:18px;
+  line-height:1.7;
   max-width:650px;
   margin:auto;
-  line-height:1.6;
 }
 
 .buttons{
-  margin-top:28px;
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 .btn{
   display:inline-block;
-  padding:14px 25px;
-  border-radius:14px;
+  padding:16px 30px;
+  border-radius:15px;
   text-decoration:none;
-  margin:5px;
   font-weight:bold;
-  cursor:pointer;
+  font-size:16px;
 }
 
 .primary{
-  background:#c77dff;
-  color:#100718;
-  border:none;
+  background:#c56cff;
+  color:#090914;
 }
 
 .secondary{
-  border:1px solid #625878;
   color:white;
-  background:transparent;
+  border:1px solid #666;
 }
 
-/* SERVICES */
+.section{
+  padding:65px 0;
+}
+
+.section-title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:35px;
+}
 
 .services{
-  margin-top:55px;
-}
-
-.services h2{
-  text-align:center;
-  margin-bottom:10px;
-  font-size:30px;
-}
-
-.services-subtitle{
-  text-align:center;
-  color:#85889e;
-  margin-bottom:25px;
-  font-size:14px;
-}
-
-.services-box{
-  background:#0f1120;
-  border:1px solid #292d49;
-  border-radius:24px;
-  padding:20px;
-}
-
-/* SOCIAL PLATFORMS */
-
-.platforms{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:12px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.platform{
-  background:#141727;
-  border:1px solid #292d49;
-  border-radius:17px;
-  padding:18px 10px;
-  color:white;
-  cursor:pointer;
-  min-height:105px;
-  transition:.2s;
-}
-
-.platform:hover{
-  transform:translateY(-3px);
-  border-color:#a865d7;
-}
-
-.platform.active{
-  background:linear-gradient(135deg,#28163e,#171a2d);
-  border-color:#c77dff;
-}
-
-.platform-logo{
-  width:48px;
-  height:48px;
-  margin:0 auto 10px;
-  border-radius:13px;
-  background:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:9px;
-}
-
-.platform-logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-
-.platform-name{
-  font-size:14px;
-  font-weight:bold;
-}
-
-/* SERVICES LIST */
-
-.service-area{
-  margin-top:22px;
-  padding-top:22px;
-  border-top:1px solid #292d49;
-}
-
-.service-heading{
-  display:flex;
-  align-items:center;
-  gap:13px;
-  margin-bottom:18px;
-}
-
-.service-heading-logo{
-  width:50px;
-  height:50px;
-  border-radius:13px;
-  background:white;
-  padding:9px;
-}
-
-.service-heading-logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-
-.service-heading h3{
-  font-size:21px;
-  margin-bottom:4px;
-}
-
-.service-heading p{
-  color:#85889e;
-  font-size:13px;
-}
-
-.service-list{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.service-item{
-  background:#141727;
-  border:1px solid #292d49;
-  border-radius:15px;
-  padding:17px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-}
-
-.service-item h4{
-  font-size:15px;
-  margin-bottom:6px;
-}
-
-.service-item p{
-  color:#85889e;
-  font-size:12px;
-}
-
-.order-btn{
-  border:none;
-  background:#c77dff;
-  color:#100718;
-  padding:9px 14px;
-  border-radius:9px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* AUTH */
-
-.auth-page{
-  display:none;
-  min-height:70vh;
-  align-items:center;
-  justify-content:center;
-  padding:50px 0;
-}
-
-.auth-box{
-  width:100%;
-  max-width:420px;
-  background:#111324;
-  border:1px solid #343752;
+.card{
+  background:#111225;
+  border:1px solid #292b48;
   border-radius:22px;
-  padding:30px;
-  box-shadow:0 15px 45px rgba(0,0,0,.3);
-}
-
-.auth-box h2{
-  text-align:center;
-  margin-bottom:8px;
-  font-size:27px;
-}
-
-.auth-description{
-  text-align:center;
-  color:#85889e;
-  font-size:14px;
-  margin-bottom:23px;
-}
-
-/* GOOGLE */
-
-.google-btn{
-  width:100%;
-  height:48px;
-  border-radius:10px;
-  border:1px solid #ddd;
-  background:white;
-  color:#222;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-bottom:20px;
-}
-
-.google-btn img{
-  width:20px;
-  height:20px;
-}
-
-.divider{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  color:#686b80;
-  font-size:11px;
-  margin-bottom:18px;
-}
-
-.divider:before,
-.divider:after{
-  content:"";
-  height:1px;
-  flex:1;
-  background:#2b2e44;
-}
-
-.input{
-  width:100%;
-  padding:13px;
-  margin-bottom:13px;
-  background:#090b16;
-  border:1px solid #30344e;
-  border-radius:10px;
-  color:white;
-  outline:none;
-}
-
-.input:focus{
-  border-color:#c77dff;
-}
-
-.auth-submit{
-  width:100%;
-  padding:13px;
-  border:none;
-  border-radius:10px;
-  background:#c77dff;
-  color:#100718;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.auth-link{
-  text-align:center;
-  margin-top:17px;
-  color:#c77dff;
-  font-size:14px;
-  cursor:pointer;
-}
-
-.back-home{
-  text-align:center;
-  margin-top:17px;
-  color:#777b91;
-  font-size:13px;
-  cursor:pointer;
-}
-
-/* WHATSAPP */
-
-.whatsapp-support{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  background:#25D366;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 7px 25px rgba(0,0,0,.35);
-  z-index:999;
+  padding:28px;
   transition:.2s;
 }
 
-.whatsapp-support:hover{
-  transform:scale(1.08);
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#c56cff;
 }
 
-.whatsapp-support img{
-  width:29px;
-  height:29px;
+.icon{
+  font-size:35px;
+  margin-bottom:18px;
 }
 
-/* FOOTER */
+.card h3{
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#999caf;
+  line-height:1.6;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:20px;
+}
+
+.stat{
+  text-align:center;
+  padding:25px;
+  border-radius:20px;
+  background:#111225;
+  border:1px solid #292b48;
+}
+
+.stat h2{
+  color:#c56cff;
+  font-size:30px;
+  margin-bottom:7px;
+}
+
+.stat p{
+  color:#aaa;
+}
 
 footer{
   text-align:center;
-  padding:45px 0 25px;
+  padding:35px 0;
+  border-top:1px solid #202137;
   color:#777b91;
-  font-size:13px;
 }
 
-/* MOBILE */
+@media(max-width:700px){
 
-@media(max-width:750px){
-
-  .platforms{
-    grid-template-columns:repeat(3,1fr);
+  .hero{
+    margin-top:25px;
+    padding:50px 20px;
   }
 
-  .service-list{
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .services{
     grid-template-columns:1fr;
   }
 
-  .hero h1{
-    font-size:34px;
-  }
-}
-
-@media(max-width:600px){
-
-  .container{
-    width:90%;
+  .stats{
+    grid-template-columns:1fr;
   }
 
-  .hero{
-    padding:40px 18px;
-  }
-
-  .hero h1{
+  .section-title{
     font-size:30px;
-  }
-
-  .platforms{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .platform{
-    min-height:100px;
-  }
-
-  .service-item{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .order-btn{
-    width:100%;
-  }
-
-  .login-btn{
-    display:none;
-  }
-
-  .signup-btn{
-    padding:9px 13px;
   }
 }
 </style>
 </head>
 
-
 <body>
 
 <div class="container">
 
-<!-- HEADER -->
-
 <header>
-
-  <div class="logo">
-    Aplora<span>BD</span>
-  </div>
-
-  <div class="header-buttons">
-
-    <button
-      class="header-btn login-btn"
-      id="loginButton">
-      Login
-    </button>
-
-    <button
-      class="header-btn signup-btn"
-      id="signupButton">
-      Sign Up
-    </button>
-
-  </div>
-
+  <div class="logo">Aplora<span>BD</span></div>
+  <a href="#" class="login">Login</a>
 </header>
 
+<section class="hero">
 
-<!-- HOME -->
+  <h1>
+    Grow Your <span>Social<br>Media</span>
+  </h1>
 
-<div id="homePage">
+  <p>
+    Affordable social media services with fast ordering,
+    easy management and reliable support.
+  </p>
 
-  <section class="hero">
+  <div class="buttons">
+    <a href="#" class="btn primary">Get Started</a>
+    <a href="#services" class="btn secondary">View Services</a>
+  </div>
 
-    <h1>
-      Grow Your <span>Social Media</span>
-    </h1>
+</section>
 
-    <p>
-      Affordable social media services with fast delivery,
-      easy ordering and reliable support.
-    </p>
+<section class="section" id="services">
 
-    <div class="buttons">
+  <h2 class="section-title">Our Services</h2>
 
-      <button
-        class="btn primary"
-        id="getStartedButton">
-        Get Started
-      </button>
+  <div class="services">
 
-      <button
-        class="btn secondary"
-        id="viewServicesButton">
-        View Services
-      </button>
-
+    <div class="card">
+      <div class="icon">📸</div>
+      <h3>Instagram</h3>
+      <p>
+        Social media services for Instagram accounts,
+        posts and profiles.
+      </p>
     </div>
 
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section
-    class="services"
-    id="services">
-
-    <h2>Our Services</h2>
-
-    <p class="services-subtitle">
-      Select a platform to view available services
-    </p>
-
-
-    <div class="services-box">
-
-      <div class="platforms">
-
-
-        <!-- INSTAGRAM -->
-
-        <button
-          class="platform active"
-          data-platform="instagram">
-
-          <div class="platform-logo">
-
-            <img
-              src="https://cdn.simpleicons.org/instagram"
-              alt="Instagram">
-
-          </div>
-
-          <div class="platform-name">
-            Instagram
-          </div>
-
-        </button>
-
-
-        <!-- FACEBOOK -->
-
-        <button
-          class="platform"
-          data-platform="facebook">
-
-          <div class="platform-logo">
-
-            <img
-              src="https://cdn.simpleicons.org/facebook"
-              alt="Facebook">
-
-          </div>
-
-          <div class="platform-name">
-            Facebook
-          </div>
-
-        </button>
-
-
-        <!-- YOUTUBE -->
-
-        <button
-          class="platform"
-          data-platform="youtube">
-
-          <div class="platform-logo">
-
-            <img
-              src="https://cdn.simpleicons.org/youtube"
-              alt="YouTube">
-
-          </div>
-
-          <div class="platform-name">
-            YouTube
-          </div>
-
-        </button>
-
-
-        <!-- TIKTOK -->
-
-        <button
-          class="platform"
-          data-platform="tiktok">
-
-          <div class="platform-logo">
-
-            <img
-              src="https://cdn.simpleicons.org/tiktok"
-              alt="TikTok">
-
-          </div>
-
-          <div class="platform-name">
-            TikTok
-          </div>
-
-        </button>
-
-
-        <!-- TELEGRAM -->
-
-        <button
-          class="platform"
-          data-platform="telegram">
-
-          <div class="platform-logo">
-
-            <img
-              src="https://cdn.simpleicons.org/telegram"
-              alt="Telegram">
-
-          </div>
-
-          <div class="platform-name">
-            Telegram
-          </div>
-
-        </button>
-
-      </div>
-
-
-      <div
-        class="service-area"
-        id="serviceContent">
-      </div>
-
+    <div class="card">
+      <div class="icon">▶️</div>
+      <h3>YouTube</h3>
+      <p>
+        Services designed to help creators improve
+        their social media presence.
+      </p>
     </div>
 
-  </section>
-
-</div>
-
-
-<!-- LOGIN -->
-
-<section
-  class="auth-page"
-  id="loginPage">
-
-  <div class="auth-box">
-
-    <h2>Welcome Back</h2>
-
-    <p class="auth-description">
-      Login to your AploraBD account
-    </p>
-
-
-    <button
-      class="google-btn"
-      id="loginGoogleButton">
-
-      <img
-        src="https://cdn.simpleicons.org/google"
-        alt="Google">
-
-      Continue with Google
-
-    </button>
-
-
-    <div class="divider">
-      OR CONTINUE WITH EMAIL
+    <div class="card">
+      <div class="icon">🎵</div>
+      <h3>TikTok</h3>
+      <p>
+        Easy-to-order services for TikTok creators
+        and social media pages.
+      </p>
     </div>
 
-
-    <input
-      class="input"
-      id="loginEmail"
-      type="email"
-      placeholder="Email address">
-
-
-    <input
-      class="input"
-      id="loginPassword"
-      type="password"
-      placeholder="Password">
-
-
-    <button
-      class="auth-submit"
-      id="loginSubmitButton">
-
-      Login
-
-    </button>
-
-
-    <div
-      class="auth-link"
-      id="goRegister">
-
-      Don't have an account?
-      Create Account
-
+    <div class="card">
+      <div class="icon">📘</div>
+      <h3>Facebook</h3>
+      <p>
+        Social media solutions for Facebook pages
+        and profiles.
+      </p>
     </div>
 
+    <div class="card">
+      <div class="icon">💬</div>
+      <h3>Engagement</h3>
+      <p>
+        Choose from available social media
+        engagement services.
+      </p>
+    </div>
 
-    <div
-      class="back-home"
-      id="loginBackHome">
-
-      ← Back to Home
-
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Fast Service</h3>
+      <p>
+        Simple ordering experience with clear
+        service information.
+      </p>
     </div>
 
   </div>
 
 </section>
 
+<section class="section">
 
-<!-- REGISTER -->
+  <h2 class="section-title">Why AploraBD?</h2>
 
-<section
-  class="auth-page"
-  id="registerPage">
+  <div class="stats">
 
-  <div class="auth-box">
-
-    <h2>Create Account</h2>
-
-    <p class="auth-description">
-      Create your AploraBD account
-    </p>
-
-
-    <button
-      class="google-btn"
-      id="registerGoogleButton">
-
-      <img
-        src="https://cdn.simpleicons.org/google"
-        alt="Google">
-
-      Continue with Google
-
-    </button>
-
-
-    <div class="divider">
-      OR REGISTER WITH EMAIL
+    <div class="stat">
+      <h2>24/7</h2>
+      <p>Order Access</p>
     </div>
 
-
-    <input
-      class="input"
-      id="registerName"
-      type="text"
-      placeholder="Full Name">
-
-
-    <input
-      class="input"
-      id="registerEmail"
-      type="email"
-      placeholder="Email address">
-
-
-    <input
-      class="input"
-      id="registerPassword"
-      type="password"
-      placeholder="Password">
-
-
-    <button
-      class="auth-submit"
-      id="registerSubmitButton">
-
-      Create Account
-
-    </button>
-
-
-    <div
-      class="auth-link"
-      id="goLogin">
-
-      Already have an account?
-      Login
-
+    <div class="stat">
+      <h2>Easy</h2>
+      <p>Ordering System</p>
     </div>
 
-
-    <div
-      class="back-home"
-      id="registerBackHome">
-
-      ← Back to Home
-
+    <div class="stat">
+      <h2>Fast</h2>
+      <p>Support</p>
     </div>
 
   </div>
 
 </section>
-
-
-<!-- WHATSAPP SUPPORT -->
-
-<a
-  class="whatsapp-support"
-  href="https://wa.me/8801892063187"
-  target="_blank"
-  aria-label="WhatsApp Support">
-
-  <img
-    src="https://cdn.simpleicons.org/whatsapp/ffffff"
-    alt="WhatsApp">
-
-</a>
-
-
-<!-- FOOTER -->
 
 <footer>
-
   © 2026 AploraBD. All rights reserved.
-
 </footer>
 
 </div>
 
-
-<script>
-
-/* ================= SERVICE DATA ================= */
-
-const services = {
-
-  instagram:{
-    name:"Instagram",
-    logo:"https://cdn.simpleicons.org/instagram",
-    description:"Instagram followers, likes, views and engagement services.",
-    items:[
-      ["Instagram Followers","Grow your Instagram audience."],
-      ["Instagram Likes","Increase engagement on your posts."],
-      ["Instagram Views","Boost Reels and video views."],
-      ["Instagram Comments","Increase interaction on posts."]
-    ]
-  },
-
-  facebook:{
-    name:"Facebook",
-    logo:"https://cdn.simpleicons.org/facebook",
-    description:"Facebook followers, page likes and engagement services.",
-    items:[
-      ["Facebook Followers","Grow your Facebook audience."],
-      ["Facebook Page Likes","Increase your page audience."],
-      ["Facebook Post Likes","Boost post engagement."],
-      ["Facebook Video Views","Increase video views."]
-    ]
-  },
-
-  youtube:{
-    name:"YouTube",
-    logo:"https://cdn.simpleicons.org/youtube",
-    description:"YouTube subscribers, views, likes and engagement services.",
-    items:[
-      ["YouTube Subscribers","Grow your YouTube channel."],
-      ["YouTube Views","Increase video views."],
-      ["YouTube Likes","Boost video engagement."],
-      ["YouTube Comments","Increase video interaction."]
-    ]
-  },
-
-  tiktok:{
-    name:"TikTok",
-    logo:"https://cdn.simpleicons.org/tiktok",
-    description:"TikTok followers, likes, views and engagement services.",
-    items:[
-      ["TikTok Followers","Grow your TikTok audience."],
-      ["TikTok Likes","Increase video likes."],
-      ["TikTok Views","Boost video views."],
-      ["TikTok Comments","Increase video engagement."]
-    ]
-  },
-
-  telegram:{
-    name:"Telegram",
-    logo:"https://cdn.simpleicons.org/telegram",
-    description:"Telegram members, views and channel services.",
-    items:[
-      ["Telegram Members","Grow your Telegram community."],
-      ["Telegram Views","Increase post views."],
-      ["Telegram Reactions","Increase post reactions."],
-      ["Telegram Promotion","Promote your Telegram channel."]
-    ]
-  }
-
-};
-
-
-/* ================= PLATFORM ================= */
-
-function showPlatform(platform){
-
-  const buttons =
-    document.querySelectorAll(".platform");
-
-  buttons.forEach(function(button){
-
-    button.classList.remove("active");
-
-    if(button.dataset.platform === platform){
-      button.classList.add("active");
-    }
-
-  });
-
-
-  const data = services[platform];
-
-  let html = `
-
-    <div class="service-heading">
-
-      <div class="service-heading-logo">
-
-        <img
-          src="${data.logo}"
-          alt="${data.name}">
-
-      </div>
-
-      <div>
-
-        <h3>${data.name} Services</h3>
-
-        <p>${data.description}</p>
-
-      </div>
-
-    </div>
-
-    <div class="service-list">
-
-  `;
-
-
-  data.items.forEach(function(item){
-
-    html += `
-
-      <div class="service-item">
-
-        <div>
-
-          <h4>${item[0]}</h4>
-
-          <p>${item[1]}</p>
-
-        </div>
-
-        <button
-          class="order-btn"
-          onclick="orderService()">
-
-          Order
-
-        </button>
-
-      </div>
-
-    `;
-
-  });
-
-
-  html += `</div>`;
-
-
-  document.getElementById("serviceContent").innerHTML = html;
-
-}
-
-
-/* ================= ORDER ================= */
-
-function orderService(){
-
-  alert(
-    "Ordering system will be connected soon."
-  );
-
-}
-
-
-/* ================= HOME ================= */
-
-function showHome(){
-
-  document.getElementById("homePage").style.display = "block";
-
-  document.getElementById("loginPage").style.display = "none";
-
-  document.getElementById("registerPage").style.display = "none";
-
-  window.scrollTo(0,0);
-
-}
-
-
-/* ================= LOGIN PAGE ================= */
-
-function showLogin(){
-
-  document.getElementById("homePage").style.display = "none";
-
-  document.getElementById("loginPage").style.display = "flex";
-
-  document.getElementById("registerPage").style.display = "none";
-
-  window.scrollTo(0,0);
-
-}
-
-
-/* ================= REGISTER PAGE ================= */
-
-function showRegister(){
-
-  document.getElementById("homePage").style.display = "none";
-
-  document.getElementById("loginPage").style.display = "none";
-
-  document.getElementById("registerPage").style.display = "flex";
-
-  window.scrollTo(0,0);
-
-}
-
-
-/* ================= GOOGLE ================= */
-
-function googleLogin(){
-
-  alert(
-    "Google Sign-In will be connected after Google authentication setup."
-  );
-
-}
-
-
-/* ================= REGISTER USER ================= */
-
-function registerUser(){
-
-  const name =
-    document.getElementById("registerName").value.trim();
-
-  const email =
-    document.getElementById("registerEmail").value.trim();
-
-  const password =
-    document.getElementById("registerPassword").value;
-
-
-  if(!name || !email || !password){
-
-    alert("Please fill in all fields.");
-
-    return;
-
-  }
-
-
-  if(password.length < 6){
-
-    alert("Password must be at least 6 characters.");
-
-    return;
-
-  }
-
-
-  const user = {
-
-    name:name,
-    email:email,
-    password:password
-
-  };
-
-
-  localStorage.setItem(
-    "aploraUser",
-    JSON.stringify(user)
-  );
-
-
-  alert(
-    "Account created successfully!"
-  );
-
-
-  document.getElementById("registerName").value = "";
-
-  document.getElementById("registerEmail").value = "";
-
-  document.getElementById("registerPassword").value = "";
-
-
-  showLogin();
-
-}
-
-
-/* ================= LOGIN USER ================= */
-
-function loginUser(){
-
-  const email =
-    document.getElementById("loginEmail").value.trim();
-
-  const password =
-    document.getElementById("loginPassword").value;
-
-
-  if(!email || !password){
-
-    alert("Please enter your email and password.");
-
-    return;
-
-  }
-
-
-  const savedUser =
-    localStorage.getItem("aploraUser");
-
-
-  if(!savedUser){
-
-    alert(
-      "No account found. Please create an account first."
-    );
-
-    return;
-
-  }
-
-
-  const user =
-    JSON.parse(savedUser);
-
-
-  if(
-    user.email === email &&
-    user.password === password
-  ){
-
-    localStorage.setItem(
-      "aploraLoggedIn",
-      "true"
-    );
-
-
-    alert(
-      "Login successful! Welcome to AploraBD."
-    );
-
-
-    document.getElementById("loginEmail").value = "";
-
-    document.getElementById("loginPassword").value = "";
-
-
-    showHome();
-
-  }
-
-  else{
-
-    alert(
-      "Invalid email or password."
-    );
-
-  }
-
-}
-
-
-/* ================= VIEW SERVICES ================= */
-
-function scrollToServices(){
-
-  document
-    .getElementById("services")
-    .scrollIntoView({
-      behavior:"smooth"
-    });
-
-}
-
-
-/* ================= BUTTON EVENTS ================= */
-
-document
-  .getElementById("loginButton")
-  .addEventListener(
-    "click",
-    showLogin
-  );
-
-
-document
-  .getElementById("signupButton")
-  .addEventListener(
-    "click",
-    showRegister
-  );
-
-
-document
-  .getElementById("getStartedButton")
-  .addEventListener(
-    "click",
-    showRegister
-  );
-
-
-document
-  .getElementById("viewServicesButton")
-  .addEventListener(
-    "click",
-    scrollToServices
-  );
-
-
-document
-  .getElementById("goRegister")
-  .addEventListener(
-    "click",
-    showRegister
-  );
-
-
-document
-  .getElementById("goLogin")
-  .addEventListener(
-    "click",
-    showLogin
-  );
-
-
-document
-  .getElementById("loginBackHome")
-  .addEventListener(
-    "click",
-    showHome
-  );
-
-
-document
-  .getElementById("registerBackHome")
-  .addEventListener(
-    "click",
-    showHome
-  );
- 
-
-document
-  .getElementById("loginSubmitButton")
-  .addEventListener(
-    "click",
-    loginUser
-  );
-
-
-document
-  .getElementById("registerSubmitButton")
-  .addEventListener(
-    "click",
-    registerUser
-  );
-
-
-document
-  .getElementById("loginGoogleButton")
-  .addEventListener(
-    "click",
-    googleLogin
-  );
-
-
-document
-  .getElementById("registerGoogleButton")
-  .addEventListener(
-    "click",
-    googleLogin
-  );
-
-
-/* ================= PLATFORM EVENTS ================= */
-
-document
-  .querySelectorA
+</body>
+</html>
