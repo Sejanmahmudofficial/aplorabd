@@ -25,7 +25,13 @@ body{
   margin:auto;
 }
 
-/* Header */
+button{
+  cursor:pointer;
+  font-family:inherit;
+}
+
+/* HEADER */
+
 header{
   display:flex;
   justify-content:space-between;
@@ -42,11 +48,6 @@ header{
   color:#c56cff;
 }
 
-button{
-  cursor:pointer;
-  font-family:inherit;
-}
-
 .login-btn{
   background:transparent;
   color:#fff;
@@ -57,7 +58,8 @@ button{
   font-weight:bold;
 }
 
-/* Home */
+/* HOME */
+
 #homePage{
   display:block;
 }
@@ -117,7 +119,9 @@ button{
   font-weight:bold;
 }
 
-/* Services */
+
+/* SOCIAL SERVICES */
+
 .services{
   padding:70px 0;
 }
@@ -125,39 +129,121 @@ button{
 .services h2{
   text-align:center;
   font-size:35px;
-  margin-bottom:35px;
+  margin-bottom:12px;
 }
 
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.service{
-  background:#111225;
-  border:1px solid #292b48;
-  border-radius:22px;
-  padding:30px 20px;
+.services-subtitle{
   text-align:center;
+  color:#9697aa;
+  margin-bottom:35px;
+  font-size:16px;
 }
 
-.service .icon{
-  font-size:42px;
-  margin-bottom:15px;
+
+/* MAIN SERVICES BOX */
+
+.social-box{
+  background:linear-gradient(145deg,#111225,#0d0f1d);
+  border:1px solid #292b48;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 15px 50px rgba(0,0,0,.25);
 }
 
-.service h3{
-  font-size:21px;
+
+/* PLATFORM GRID */
+
+.platform-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  margin-bottom:28px;
+}
+
+.platform{
+  background:#15172a;
+  border:1px solid #292b48;
+  border-radius:18px;
+  padding:20px 10px;
+  text-align:center;
+  transition:.25s;
+}
+
+.platform:hover{
+  transform:translateY(-3px);
+  border-color:#c56cff;
+}
+
+.platform.active{
+  background:linear-gradient(145deg,#29163f,#17192f);
+  border-color:#c56cff;
+  box-shadow:0 0 20px rgba(197,108,255,.12);
+}
+
+.platform img{
+  width:42px;
+  height:42px;
   margin-bottom:10px;
 }
 
-.service p{
-  color:#aaaabd;
-  line-height:1.6;
+.platform-name{
+  font-size:14px;
+  font-weight:bold;
 }
 
-/* Auth */
+
+/* SERVICES LIST */
+
+.service-area{
+  border-top:1px solid #25273d;
+  padding-top:25px;
+}
+
+.service-title{
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.service-list{
+  display:grid;
+  gap:12px;
+}
+
+.service-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  background:#15172a;
+  border:1px solid #292b48;
+  border-radius:15px;
+  padding:16px 18px;
+}
+
+.service-info h3{
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.service-info p{
+  color:#85869b;
+  font-size:13px;
+}
+
+.order-btn{
+  background:#c56cff;
+  color:#080914;
+  border:none;
+  padding:10px 18px;
+  border-radius:10px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+
+/* AUTH */
+
 #authPage{
   display:none;
   min-height:85vh;
@@ -271,7 +357,9 @@ button{
   font-size:14px;
 }
 
-/* Footer */
+
+/* FOOTER */
+
 footer{
   text-align:center;
   padding:30px 0;
@@ -280,8 +368,39 @@ footer{
   margin-top:30px;
 }
 
-/* Mobile */
+
+/* WHATSAPP */
+
+.whatsapp-support{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.4);
+  z-index:999;
+  transition:.2s;
+}
+
+.whatsapp-support:hover{
+  transform:scale(1.08);
+}
+
+.whatsapp-support img{
+  width:31px;
+  height:31px;
+}
+
+
+/* MOBILE */
+
 @media(max-width:750px){
+
   .hero{
     margin-top:25px;
     padding:50px 20px;
@@ -289,10 +408,6 @@ footer{
 
   .hero h1{
     font-size:38px;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr;
   }
 
   header{
@@ -306,24 +421,70 @@ footer{
   .login-btn{
     padding:10px 17px;
   }
+
+  .platform-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .social-box{
+    padding:17px;
+  }
+
+  .service-item{
+    align-items:flex-start;
+  }
+
+  .order-btn{
+    padding:9px 14px;
+  }
+}
+
+@media(max-width:420px){
+
+  .platform-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .platform{
+    padding:17px 8px;
+  }
+
+  .platform img{
+    width:36px;
+    height:36px;
+  }
+
+  .service-item{
+    flex-direction:column;
+  }
+
+  .order-btn{
+    width:100%;
+  }
 }
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
 <header>
-  <div class="logo">Aplora<span>BD</span></div>
+
+  <div class="logo">
+    Aplora<span>BD</span>
+  </div>
 
   <button class="login-btn" onclick="showLogin()">
     Login
   </button>
+
 </header>
 
 
 <!-- HOME PAGE -->
+
 <section id="homePage">
 
   <div class="hero">
@@ -338,6 +499,7 @@ footer{
     </p>
 
     <div class="buttons">
+
       <button class="primary" onclick="showRegister()">
         Get Started
       </button>
@@ -345,39 +507,122 @@ footer{
       <button class="secondary" onclick="scrollToServices()">
         View Services
       </button>
+
     </div>
 
   </div>
 
 
+  <!-- SERVICES -->
+
   <div class="services" id="services">
 
-    <h2>Our Services</h2>
+    <h2>Social Media Services</h2>
 
-    <div class="service-grid">
+    <p class="services-subtitle">
+      Choose a platform to explore available services
+    </p>
 
-      <div class="service">
-        <div class="icon">📸</div>
-        <h3>Instagram</h3>
-        <p>
-          Social media growth services for Instagram.
-        </p>
+
+    <div class="social-box">
+
+      <!-- PLATFORMS -->
+
+      <div class="platform-grid">
+
+        <button
+          class="platform active"
+          id="instagramPlatform"
+          onclick="showPlatform('instagram')">
+
+          <img
+            src="https://cdn.simpleicons.org/instagram"
+            alt="Instagram">
+
+          <div class="platform-name">
+            Instagram
+          </div>
+
+        </button>
+
+
+        <button
+          class="platform"
+          id="facebookPlatform"
+          onclick="showPlatform('facebook')">
+
+          <img
+            src="https://cdn.simpleicons.org/facebook"
+            alt="Facebook">
+
+          <div class="platform-name">
+            Facebook
+          </div>
+
+        </button>
+
+
+        <button
+          class="platform"
+          id="youtubePlatform"
+          onclick="showPlatform('youtube')">
+
+          <img
+            src="https://cdn.simpleicons.org/youtube"
+            alt="YouTube">
+
+          <div class="platform-name">
+            YouTube
+          </div>
+
+        </button>
+
+
+        <button
+          class="platform"
+          id="tiktokPlatform"
+          onclick="showPlatform('tiktok')">
+
+          <img
+            src="https://cdn.simpleicons.org/tiktok"
+            alt="TikTok">
+
+          <div class="platform-name">
+            TikTok
+          </div>
+
+        </button>
+
+
+        <button
+          class="platform"
+          id="telegramPlatform"
+          onclick="showPlatform('telegram')">
+
+          <img
+            src="https://cdn.simpleicons.org/telegram"
+            alt="Telegram">
+
+          <div class="platform-name">
+            Telegram
+          </div>
+
+        </button>
+
       </div>
 
-      <div class="service">
-        <div class="icon">📘</div>
-        <h3>Facebook</h3>
-        <p>
-          Affordable Facebook growth and engagement services.
-        </p>
-      </div>
 
-      <div class="service">
-        <div class="icon">▶️</div>
-        <h3>YouTube</h3>
-        <p>
-          YouTube-related social media services.
-        </p>
+      <!-- SERVICE AREA -->
+
+      <div class="service-area">
+
+        <div class="service-title" id="serviceTitle">
+          Instagram Services
+        </div>
+
+        <div class="service-list" id="serviceList">
+        </div>
+
       </div>
 
     </div>
@@ -388,6 +633,7 @@ footer{
 
 
 <!-- LOGIN / REGISTER PAGE -->
+
 <section id="authPage">
 
   <div class="auth-box">
@@ -400,98 +646,143 @@ footer{
       Welcome back
     </div>
 
+
     <div class="tabs">
 
       <button
         id="loginTab"
         class="tab active"
         onclick="showLoginForm()">
+
         Login
+
       </button>
+
 
       <button
         id="registerTab"
         class="tab"
         onclick="showRegisterForm()">
+
         Register
+
       </button>
 
     </div>
 
 
     <!-- LOGIN FORM -->
+
     <form id="loginForm" onsubmit="loginUser(event)">
 
       <div class="form-group">
+
         <label>Email</label>
+
         <input
           type="email"
           id="loginEmail"
           placeholder="Enter your email"
           required>
+
       </div>
 
+
       <div class="form-group">
+
         <label>Password</label>
+
         <input
           type="password"
           id="loginPassword"
           placeholder="Enter your password"
           required>
+
       </div>
 
-      <button class="auth-submit" type="submit">
+
+      <button
+        class="auth-submit"
+        type="submit">
+
         Login
+
       </button>
 
     </form>
 
 
     <!-- REGISTER FORM -->
+
     <form
       id="registerForm"
       style="display:none"
       onsubmit="registerUser(event)">
 
       <div class="form-group">
+
         <label>Full Name</label>
+
         <input
           type="text"
           id="registerName"
           placeholder="Enter your name"
           required>
+
       </div>
 
+
       <div class="form-group">
+
         <label>Email</label>
+
         <input
           type="email"
           id="registerEmail"
           placeholder="Enter your email"
           required>
+
       </div>
 
+
       <div class="form-group">
+
         <label>Password</label>
+
         <input
           type="password"
           id="registerPassword"
           placeholder="Create a password"
           minlength="6"
           required>
+
       </div>
 
-      <button class="auth-submit" type="submit">
+
+      <button
+        class="auth-submit"
+        type="submit">
+
         Create Account
+
       </button>
 
     </form>
 
-    <button class="back-btn" onclick="showHome()">
+
+    <button
+      class="back-btn"
+      onclick="showHome()">
+
       ← Back to Home
+
     </button>
 
-    <div id="message" class="message"></div>
+
+    <div
+      id="message"
+      class="message">
+    </div>
 
   </div>
 
@@ -505,9 +796,25 @@ footer{
 </div>
 
 
+<!-- WHATSAPP SUPPORT -->
+
+<a
+  class="whatsapp-support"
+  href="https://wa.me/8801892063187"
+  target="_blank"
+  aria-label="WhatsApp Support">
+
+  <img
+    src="https://cdn.simpleicons.org/whatsapp/ffffff"
+    alt="WhatsApp">
+
+</a>
+
+
 <script>
 
-/* Show Home */
+/* ================= HOME ================= */
+
 function showHome(){
 
   document.getElementById("homePage").style.display="block";
@@ -518,10 +825,12 @@ function showHome(){
     top:0,
     behavior:"smooth"
   });
+
 }
 
 
-/* Show Login Page */
+/* ================= LOGIN PAGE ================= */
+
 function showLogin(){
 
   document.getElementById("homePage").style.display="none";
@@ -534,10 +843,12 @@ function showLogin(){
     top:0,
     behavior:"smooth"
   });
+
 }
 
 
-/* Show Register Page */
+/* ================= REGISTER PAGE ================= */
+
 function showRegister(){
 
   document.getElementById("homePage").style.display="none";
@@ -550,10 +861,12 @@ function showRegister(){
     top:0,
     behavior:"smooth"
   });
+
 }
 
 
-/* Login Tab */
+/* ================= LOGIN TAB ================= */
+
 function showLoginForm(){
 
   document.getElementById("loginForm").style.display="block";
@@ -565,10 +878,12 @@ function showLoginForm(){
   document.getElementById("registerTab").classList.remove("active");
 
   document.getElementById("message").innerText="";
+
 }
 
 
-/* Register Tab */
+/* ================= REGISTER TAB ================= */
+
 function showRegisterForm(){
 
   document.getElementById("loginForm").style.display="none";
@@ -580,10 +895,12 @@ function showRegisterForm(){
   document.getElementById("registerTab").classList.add("active");
 
   document.getElementById("message").innerText="";
+
 }
 
 
-/* Register */
+/* ================= REGISTER ================= */
+
 function registerUser(event){
 
   event.preventDefault();
@@ -597,6 +914,7 @@ function registerUser(event){
   const password =
     document.getElementById("registerPassword").value;
 
+
   localStorage.setItem(
     "aploraUser",
     JSON.stringify({
@@ -606,16 +924,22 @@ function registerUser(event){
     })
   );
 
+
   document.getElementById("message").innerText =
     "Account created successfully!";
 
+
   setTimeout(function(){
+
     showLoginForm();
+
   },1000);
+
 }
 
 
-/* Login */
+/* ================= LOGIN ================= */
+
 function loginUser(event){
 
   event.preventDefault();
@@ -626,8 +950,10 @@ function loginUser(event){
   const password =
     document.getElementById("loginPassword").value;
 
+
   const savedUser =
     JSON.parse(localStorage.getItem("aploraUser"));
+
 
   if(
     savedUser &&
@@ -638,23 +964,198 @@ function loginUser(event){
     document.getElementById("message").innerText =
       "Login successful!";
 
-  }else{
+  }
+
+  else{
 
     document.getElementById("message").innerText =
       "Invalid email or password.";
 
   }
+
 }
 
 
-/* Services */
-function scrollToServices(){
+/* ================= SERVICES DATA ================= */
 
-  document.getElementById("services").scrollIntoView({
-    behavior:"smooth"
+const services = {
+
+  instagram: [
+
+    ["Instagram Followers","Fast delivery social growth service."],
+
+    ["Instagram Likes","Increase likes on your posts."],
+
+    ["Instagram Views","Boost video and reel views."],
+
+    ["Instagram Comments","Engagement service for posts."]
+
+  ],
+
+
+  facebook: [
+
+    ["Facebook Followers","Grow your Facebook audience."],
+
+    ["Facebook Page Likes","Increase page likes."],
+
+    ["Facebook Post Likes","Boost post engagement."],
+
+    ["Facebook Video Views","Increase video views."]
+
+  ],
+
+
+  youtube: [
+
+    ["YouTube Subscribers","Grow your channel audience."],
+
+    ["YouTube Views","Increase video views."],
+
+    ["YouTube Likes","Boost video engagement."],
+
+    ["YouTube Comments","Engagement service for videos."]
+
+  ],
+
+
+  tiktok: [
+
+    ["TikTok Followers","Grow your TikTok audience."],
+
+    ["TikTok Likes","Increase likes on videos."],
+
+    ["TikTok Views","Boost video views."],
+
+    ["TikTok Shares","Increase video shares."]
+
+  ],
+
+
+  telegram: [
+
+    ["Telegram Members","Grow your Telegram community."],
+
+    ["Telegram Post Views","Increase post views."],
+
+    ["Telegram Reactions","Boost post reactions."],
+
+    ["Telegram Channel Members","Increase channel audience."]
+
+  ]
+
+};
+
+
+/* ================= SHOW PLATFORM ================= */
+
+function showPlatform(platform){
+
+  const list =
+    document.getElementById("serviceList");
+
+  const title =
+    document.getElementById("serviceTitle");
+
+
+  const platformNames = {
+
+    instagram:"Instagram",
+
+    facebook:"Facebook",
+
+    youtube:"YouTube",
+
+    tiktok:"TikTok",
+
+    telegram:"Telegram"
+
+  };
+
+
+  title.innerText =
+    platformNames[platform] + " Services";
+
+
+  list.innerHTML="";
+
+
+  services[platform].forEach(function(service){
+
+    const item =
+      document.createElement("div");
+
+    item.className="service-item";
+
+
+    item.innerHTML=`
+
+      <div class="service-info">
+
+        <h3>${service[0]}</h3>
+
+        <p>${service[1]}</p>
+
+      </div>
+
+      <button
+        class="order-btn"
+        onclick="orderService('${service[0]}')">
+
+        Order
+
+      </button>
+
+    `;
+
+
+    list.appendChild(item);
+
   });
 
+
+  document.querySelectorAll(".platform")
+    .forEach(function(btn){
+
+      btn.classList.remove("active");
+
+    });
+
+
+  document
+    .getElementById(platform+"Platform")
+    .classList.add("active");
+
 }
+
+
+/* ================= ORDER ================= */
+
+function orderService(service){
+
+  alert(
+    service +
+    " ordering system will be connected soon."
+  );
+
+}
+
+
+/* ================= SCROLL ================= */
+
+function scrollToServices(){
+
+  document.getElementById("services")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* ================= DEFAULT PLATFORM ================= */
+
+showPlatform("instagram");
 
 </script>
 
