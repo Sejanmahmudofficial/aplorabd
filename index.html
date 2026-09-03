@@ -462,6 +462,84 @@ footer{
     width:100%;
   }
 }
+
+  /* ================= DASHBOARD ================= */
+
+#dashboardPage{
+  display:none;
+  padding:35px 0 60px;
+}
+
+.dashboard-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.dashboard-title{
+  font-size:28px;
+  font-weight:800;
+}
+
+.menu-btn{
+  width:45px;
+  height:45px;
+  border-radius:12px;
+  border:1px solid #44455e;
+  background:#15172a;
+  color:#fff;
+  font-size:25px;
+}
+
+.welcome-box{
+  background:linear-gradient(135deg,#24133b,#11162f);
+  border:1px solid #40375b;
+  border-radius:25px;
+  padding:28px;
+  margin-bottom:20px;
+}
+
+.welcome-box h2{
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.welcome-box p{
+  color:#9999ad;
+}
+
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.dashboard-card{
+  background:#15172a;
+  border:1px solid #292b48;
+  border-radius:18px;
+  padding:22px;
+}
+
+.dashboard-card p{
+  color:#85869b;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.dashboard-card h3{
+  font-size:25px;
+  color:#c56cff;
+}
+
+@media(max-width:750px){
+
+  .dashboard-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
 </style>
 </head>
 
