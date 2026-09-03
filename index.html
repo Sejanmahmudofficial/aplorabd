@@ -1317,6 +1317,21 @@ function togglePassword(inputId, button){
   }
 
   }
+
+  function showDashboard(){
+
+  document.getElementById("homePage").style.display="none";
+
+  document.getElementById("authPage").style.display="none";
+
+  document.getElementById("dashboardPage").style.display="block";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+  }
   
 </script>
 
