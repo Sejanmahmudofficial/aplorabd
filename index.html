@@ -58,7 +58,8 @@ header{
   font-weight:bold;
 }
 
-/* HOME */
+
+/* HERO */
 
 #homePage{
   display:block;
@@ -120,7 +121,7 @@ header{
 }
 
 
-/* SOCIAL SERVICES */
+/* SERVICES */
 
 .services{
   padding:70px 0;
@@ -136,22 +137,14 @@ header{
   text-align:center;
   color:#9697aa;
   margin-bottom:35px;
-  font-size:16px;
 }
-
-
-/* MAIN SERVICES BOX */
 
 .social-box{
   background:linear-gradient(145deg,#111225,#0d0f1d);
   border:1px solid #292b48;
   border-radius:25px;
   padding:25px;
-  box-shadow:0 15px 50px rgba(0,0,0,.25);
 }
-
-
-/* PLATFORM GRID */
 
 .platform-grid{
   display:grid;
@@ -166,6 +159,7 @@ header{
   border-radius:18px;
   padding:20px 10px;
   text-align:center;
+  color:#fff;
   transition:.25s;
 }
 
@@ -177,7 +171,6 @@ header{
 .platform.active{
   background:linear-gradient(145deg,#29163f,#17192f);
   border-color:#c56cff;
-  box-shadow:0 0 20px rgba(197,108,255,.12);
 }
 
 .platform img{
@@ -190,9 +183,6 @@ header{
   font-size:14px;
   font-weight:bold;
 }
-
-
-/* SERVICES LIST */
 
 .service-area{
   border-top:1px solid #25273d;
@@ -238,7 +228,6 @@ header{
   padding:10px 18px;
   border-radius:10px;
   font-weight:bold;
-  white-space:nowrap;
 }
 
 
@@ -258,7 +247,6 @@ header{
   border:1px solid #40375b;
   border-radius:28px;
   padding:35px 25px;
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
 .auth-logo{
@@ -297,7 +285,6 @@ header{
 .tab.active{
   background:#c56cff;
   color:#080914;
-  border-color:#c56cff;
 }
 
 .form-group{
@@ -322,10 +309,6 @@ header{
   font-size:15px;
 }
 
-.form-group input:focus{
-  border-color:#c56cff;
-}
-
 .auth-submit{
   width:100%;
   padding:15px;
@@ -335,11 +318,9 @@ header{
   color:#080914;
   font-size:17px;
   font-weight:bold;
-  margin-top:5px;
 }
 
 .back-btn{
-  display:block;
   width:100%;
   margin-top:15px;
   padding:13px;
@@ -358,14 +339,195 @@ header{
 }
 
 
-/* FOOTER */
+/* DASHBOARD */
 
-footer{
+#dashboardPage{
+  display:none;
+  min-height:85vh;
+  padding-bottom:50px;
+}
+
+.dashboard-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 0;
+}
+
+.dashboard-logo{
+  font-size:27px;
+  font-weight:800;
+}
+
+.dashboard-logo span{
+  color:#c56cff;
+}
+
+
+/* THREE DOT */
+
+.menu-wrapper{
+  position:relative;
+}
+
+.menu-button{
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  border:1px solid #41435c;
+  background:#111225;
+  color:#fff;
+  font-size:25px;
+  line-height:20px;
+}
+
+.dropdown-menu{
+  display:none;
+  position:absolute;
+  right:0;
+  top:55px;
+  width:210px;
+  background:#111225;
+  border:1px solid #383a55;
+  border-radius:17px;
+  padding:8px;
+  z-index:100;
+  box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+.dropdown-menu.show{
+  display:block;
+}
+
+.menu-item{
+  display:block;
+  width:100%;
+  text-align:left;
+  padding:13px 14px;
+  border:none;
+  background:transparent;
+  color:#fff;
+  border-radius:11px;
+  font-size:15px;
+}
+
+.menu-item:hover{
+  background:#211d35;
+  color:#c56cff;
+}
+
+
+/* DASHBOARD WELCOME */
+
+.dashboard-welcome{
+  margin-top:25px;
+  padding:35px 25px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#24133b,#11162f);
+  border:1px solid #40375b;
+}
+
+.dashboard-welcome h1{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.dashboard-welcome p{
+  color:#a6a6b8;
+}
+
+
+/* STATS */
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:20px;
+}
+
+.stat-card{
+  background:#111225;
+  border:1px solid #292b48;
+  border-radius:18px;
+  padding:22px;
+}
+
+.stat-icon{
+  font-size:25px;
+  margin-bottom:15px;
+}
+
+.stat-card h3{
+  color:#9293a7;
+  font-size:13px;
+  font-weight:normal;
+  margin-bottom:7px;
+}
+
+.stat-card strong{
+  font-size:23px;
+}
+
+
+/* DASHBOARD ACTIONS */
+
+.dashboard-actions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:20px;
+}
+
+.dashboard-action{
+  padding:20px;
+  background:#111225;
+  border:1px solid #292b48;
+  border-radius:18px;
+  color:#fff;
+  text-align:left;
+  transition:.2s;
+}
+
+.dashboard-action:hover{
+  border-color:#c56cff;
+  transform:translateY(-2px);
+}
+
+.dashboard-action .action-icon{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.dashboard-action h3{
+  margin-bottom:5px;
+}
+
+.dashboard-action p{
+  color:#88899d;
+  font-size:13px;
+}
+
+
+/* RECENT ORDERS */
+
+.recent-orders{
+  margin-top:25px;
+  background:#111225;
+  border:1px solid #292b48;
+  border-radius:20px;
+  padding:22px;
+}
+
+.recent-orders h2{
+  font-size:21px;
+  margin-bottom:18px;
+}
+
+.no-orders{
   text-align:center;
-  padding:30px 0;
   color:#77788d;
-  border-top:1px solid #1b1d30;
-  margin-top:30px;
+  padding:25px 10px;
 }
 
 
@@ -384,16 +546,22 @@ footer{
   justify-content:center;
   box-shadow:0 8px 25px rgba(0,0,0,.4);
   z-index:999;
-  transition:.2s;
-}
-
-.whatsapp-support:hover{
-  transform:scale(1.08);
 }
 
 .whatsapp-support img{
   width:31px;
   height:31px;
+}
+
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px 0;
+  color:#77788d;
+  border-top:1px solid #1b1d30;
+  margin-top:30px;
 }
 
 
@@ -410,49 +578,24 @@ footer{
     font-size:38px;
   }
 
-  header{
-    padding:20px 0;
-  }
-
-  .logo{
-    font-size:25px;
-  }
-
-  .login-btn{
-    padding:10px 17px;
-  }
-
   .platform-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .social-box{
-    padding:17px;
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .dashboard-actions{
+    grid-template-columns:1fr;
   }
 
   .service-item{
     align-items:flex-start;
   }
-
-  .order-btn{
-    padding:9px 14px;
-  }
 }
 
 @media(max-width:420px){
-
-  .platform-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .platform{
-    padding:17px 8px;
-  }
-
-  .platform img{
-    width:36px;
-    height:36px;
-  }
 
   .service-item{
     flex-direction:column;
@@ -470,6 +613,11 @@ footer{
 
 <div class="container">
 
+
+<!-- ================= HOME ================= -->
+
+<section id="homePage">
+
 <header>
 
   <div class="logo">
@@ -483,308 +631,541 @@ footer{
 </header>
 
 
-<!-- HOME PAGE -->
+<div class="hero">
 
-<section id="homePage">
+  <h1>
+    Grow Your <span>Social<br>Media</span>
+  </h1>
 
-  <div class="hero">
+  <p>
+    Affordable social media services with fast delivery,
+    easy ordering and reliable support.
+  </p>
 
-    <h1>
-      Grow Your <span>Social<br>Media</span>
-    </h1>
+  <div class="buttons">
 
-    <p>
-      Affordable social media services with fast delivery,
-      easy ordering and reliable support.
-    </p>
+    <button class="primary" onclick="showRegister()">
+      Get Started
+    </button>
 
-    <div class="buttons">
+    <button class="secondary" onclick="scrollToServices()">
+      View Services
+    </button>
 
-      <button class="primary" onclick="showRegister()">
-        Get Started
+  </div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<div class="services" id="services">
+
+  <h2>Social Media Services</h2>
+
+  <p class="services-subtitle">
+    Choose a platform to explore available services
+  </p>
+
+
+  <div class="social-box">
+
+    <div class="platform-grid">
+
+      <button class="platform active"
+        id="instagramPlatform"
+        onclick="showPlatform('instagram')">
+
+        <img src="https://cdn.simpleicons.org/instagram"
+          alt="Instagram">
+
+        <div class="platform-name">
+          Instagram
+        </div>
+
       </button>
 
-      <button class="secondary" onclick="scrollToServices()">
-        View Services
+
+      <button class="platform"
+        id="facebookPlatform"
+        onclick="showPlatform('facebook')">
+
+        <img src="https://cdn.simpleicons.org/facebook"
+          alt="Facebook">
+
+        <div class="platform-name">
+          Facebook
+        </div>
+
+      </button>
+
+
+      <button class="platform"
+        id="youtubePlatform"
+        onclick="showPlatform('youtube')">
+
+        <img src="https://cdn.simpleicons.org/youtube"
+          alt="YouTube">
+
+        <div class="platform-name">
+          YouTube
+        </div>
+
+      </button>
+
+
+      <button class="platform"
+        id="tiktokPlatform"
+        onclick="showPlatform('tiktok')">
+
+        <img src="https://cdn.simpleicons.org/tiktok"
+          alt="TikTok">
+
+        <div class="platform-name">
+          TikTok
+        </div>
+
+      </button>
+
+
+      <button class="platform"
+        id="telegramPlatform"
+        onclick="showPlatform('telegram')">
+
+        <img src="https://cdn.simpleicons.org/telegram"
+          alt="Telegram">
+
+        <div class="platform-name">
+          Telegram
+        </div>
+
       </button>
 
     </div>
 
-  </div>
 
+    <div class="service-area">
 
-  <!-- SERVICES -->
-
-  <div class="services" id="services">
-
-    <h2>Social Media Services</h2>
-
-    <p class="services-subtitle">
-      Choose a platform to explore available services
-    </p>
-
-
-    <div class="social-box">
-
-      <!-- PLATFORMS -->
-
-      <div class="platform-grid">
-
-        <button
-          class="platform active"
-          id="instagramPlatform"
-          onclick="showPlatform('instagram')">
-
-          <img
-            src="https://cdn.simpleicons.org/instagram"
-            alt="Instagram">
-
-          <div class="platform-name">
-            Instagram
-          </div>
-
-        </button>
-
-
-        <button
-          class="platform"
-          id="facebookPlatform"
-          onclick="showPlatform('facebook')">
-
-          <img
-            src="https://cdn.simpleicons.org/facebook"
-            alt="Facebook">
-
-          <div class="platform-name">
-            Facebook
-          </div>
-
-        </button>
-
-
-        <button
-          class="platform"
-          id="youtubePlatform"
-          onclick="showPlatform('youtube')">
-
-          <img
-            src="https://cdn.simpleicons.org/youtube"
-            alt="YouTube">
-
-          <div class="platform-name">
-            YouTube
-          </div>
-
-        </button>
-
-
-        <button
-          class="platform"
-          id="tiktokPlatform"
-          onclick="showPlatform('tiktok')">
-
-          <img
-            src="https://cdn.simpleicons.org/tiktok"
-            alt="TikTok">
-
-          <div class="platform-name">
-            TikTok
-          </div>
-
-        </button>
-
-
-        <button
-          class="platform"
-          id="telegramPlatform"
-          onclick="showPlatform('telegram')">
-
-          <img
-            src="https://cdn.simpleicons.org/telegram"
-            alt="Telegram">
-
-          <div class="platform-name">
-            Telegram
-          </div>
-
-        </button>
-
+      <div class="service-title" id="serviceTitle">
+        Instagram Services
       </div>
 
-
-      <!-- SERVICE AREA -->
-
-      <div class="service-area">
-
-        <div class="service-title" id="serviceTitle">
-          Instagram Services
-        </div>
-
-        <div class="service-list" id="serviceList">
-        </div>
-
+      <div class="service-list" id="serviceList">
       </div>
 
     </div>
 
   </div>
+
+</div>
 
 </section>
 
 
-<!-- LOGIN / REGISTER PAGE -->
+<!-- ================= AUTH ================= -->
 
 <section id="authPage">
 
-  <div class="auth-box">
+<div class="auth-box">
 
-    <div class="auth-logo">
-      Aplora<span>BD</span>
-    </div>
+  <div class="auth-logo">
+    Aplora<span>BD</span>
+  </div>
 
-    <div class="auth-subtitle">
-      Welcome back
-    </div>
-
-
-    <div class="tabs">
-
-      <button
-        id="loginTab"
-        class="tab active"
-        onclick="showLoginForm()">
-
-        Login
-
-      </button>
+  <div class="auth-subtitle">
+    Welcome to AploraBD
+  </div>
 
 
-      <button
-        id="registerTab"
-        class="tab"
-        onclick="showRegisterForm()">
+  <div class="tabs">
 
-        Register
+    <button id="loginTab"
+      class="tab active"
+      onclick="showLoginForm()">
 
-      </button>
-
-    </div>
-
-
-    <!-- LOGIN FORM -->
-
-    <form id="loginForm" onsubmit="loginUser(event)">
-
-      <div class="form-group">
-
-        <label>Email</label>
-
-        <input
-          type="email"
-          id="loginEmail"
-          placeholder="Enter your email"
-          required>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label>Password</label>
-
-        <input
-          type="password"
-          id="loginPassword"
-          placeholder="Enter your password"
-          required>
-
-      </div>
-
-
-      <button
-        class="auth-submit"
-        type="submit">
-
-        Login
-
-      </button>
-
-    </form>
-
-
-    <!-- REGISTER FORM -->
-
-    <form
-      id="registerForm"
-      style="display:none"
-      onsubmit="registerUser(event)">
-
-      <div class="form-group">
-
-        <label>Full Name</label>
-
-        <input
-          type="text"
-          id="registerName"
-          placeholder="Enter your name"
-          required>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label>Email</label>
-
-        <input
-          type="email"
-          id="registerEmail"
-          placeholder="Enter your email"
-          required>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label>Password</label>
-
-        <input
-          type="password"
-          id="registerPassword"
-          placeholder="Create a password"
-          minlength="6"
-          required>
-
-      </div>
-
-
-      <button
-        class="auth-submit"
-        type="submit">
-
-        Create Account
-
-      </button>
-
-    </form>
-
-
-    <button
-      class="back-btn"
-      onclick="showHome()">
-
-      ← Back to Home
+      Login
 
     </button>
 
 
-    <div
-      id="message"
-      class="message">
+    <button id="registerTab"
+      class="tab"
+      onclick="showRegisterForm()">
+
+      Register
+
+    </button>
+
+  </div>
+
+
+  <!-- LOGIN -->
+
+  <form id="loginForm"
+    onsubmit="loginUser(event)">
+
+    <div class="form-group">
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        id="loginEmail"
+        placeholder="Enter your email"
+        required>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="loginPassword"
+        placeholder="Enter your password"
+        required>
+
+    </div>
+
+
+    <button
+      class="auth-submit"
+      type="submit">
+
+      Login
+
+    </button>
+
+  </form>
+
+
+  <!-- REGISTER -->
+
+  <form id="registerForm"
+    style="display:none"
+    onsubmit="registerUser(event)">
+
+    <div class="form-group">
+
+      <label>Full Name</label>
+
+      <input
+        type="text"
+        id="registerName"
+        placeholder="Enter your name"
+        required>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        id="registerEmail"
+        placeholder="Enter your email"
+        required>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="registerPassword"
+        placeholder="Create a password"
+        minlength="6"
+        required>
+
+    </div>
+
+
+    <button
+      class="auth-submit"
+      type="submit">
+
+      Create Account
+
+    </button>
+
+  </form>
+
+
+  <button
+    class="back-btn"
+    onclick="showHome()">
+
+    ← Back to Home
+
+  </button>
+
+
+  <div id="message" class="message"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboardPage">
+
+
+  <div class="dashboard-header">
+
+    <div class="dashboard-logo">
+      Aplora<span>BD</span>
+    </div>
+
+
+    <div class="menu-wrapper">
+
+      <button
+        class="menu-button"
+        onclick="toggleMenu()">
+
+        ⋮
+
+      </button>
+
+
+      <div
+        id="dropdownMenu"
+        class="dropdown-menu">
+
+        <button
+          class="menu-item"
+          onclick="dashboardHome()">
+
+          🏠 Dashboard
+
+        </button>
+
+
+        <button
+          class="menu-item"
+          onclick="newOrder()">
+
+          🛒 New Order
+
+        </button>
+
+
+        <button
+          class="menu-item"
+          onclick="showOrders()">
+
+          📦 Orders
+
+        </button>
+
+
+        <button
+          class="menu-item"
+          onclick="addFunds()">
+
+          💳 Add Funds
+
+        </button>
+
+
+        <button
+          class="menu-item"
+          onclick="showProfile()">
+
+          👤 Profile
+
+        </button>
+
+
+        <button
+          class="menu-item"
+          onclick="support()">
+
+          🎧 Support
+
+        </button>
+
+
+        <button
+          class="menu-item"
+          onclick="logoutUser()">
+
+          🚪 Logout
+
+        </button>
+
+      </div>
+
     </div>
 
   </div>
+
+
+  <!-- WELCOME -->
+
+  <div class="dashboard-welcome">
+
+    <h1>
+      Welcome, <span id="customerName">Customer</span> 👋
+    </h1>
+
+    <p>
+      Manage your orders and account from your dashboard.
+    </p>
+
+  </div>
+
+
+  <!-- STATS -->
+
+  <div class="stats-grid">
+
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        💰
+      </div>
+
+      <h3>Balance</h3>
+
+      <strong>
+        ৳0.00
+      </strong>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        📦
+      </div>
+
+      <h3>Total Orders</h3>
+
+      <strong>
+        0
+      </strong>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        ⏳
+      </div>
+
+      <h3>Pending</h3>
+
+      <strong>
+        0
+      </strong>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        ✅
+      </div>
+
+      <h3>Completed</h3>
+
+      <strong>
+        0
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- ACTIONS -->
+
+  <div class="dashboard-actions">
+
+
+    <button
+      class="dashboard-action"
+      onclick="newOrder()">
+
+      <div class="action-icon">
+        🛒
+      </div>
+
+      <h3>New Order</h3>
+
+      <p>
+        Create a new service order
+      </p>
+
+    </button>
+
+
+    <button
+      class="dashboard-action"
+      onclick="addFunds()">
+
+      <div class="action-icon">
+        💳
+      </div>
+
+      <h3>Add Funds</h3>
+
+      <p>
+        Add balance to your account
+      </p>
+
+    </button>
+
+
+    <button
+      class="dashboard-action"
+      onclick="showOrders()">
+
+      <div class="action-icon">
+        📋
+      </div>
+
+      <h3>Order History</h3>
+
+      <p>
+        View your previous orders
+      </p>
+
+    </button>
+
+  </div>
+
+
+  <!-- RECENT ORDERS -->
+
+  <div class="recent-orders">
+
+    <h2>
+      Recent Orders
+    </h2>
+
+    <div class="no-orders">
+
+      You don't have any orders yet.
+
+    </div>
+
+  </div>
+
 
 </section>
 
@@ -796,7 +1177,7 @@ footer{
 </div>
 
 
-<!-- WHATSAPP SUPPORT -->
+<!-- WHATSAPP -->
 
 <a
   class="whatsapp-support"
@@ -813,13 +1194,15 @@ footer{
 
 <script>
 
-/* ================= HOME ================= */
+/* ================= PAGE FUNCTIONS ================= */
 
 function showHome(){
 
   document.getElementById("homePage").style.display="block";
 
   document.getElementById("authPage").style.display="none";
+
+  document.getElementById("dashboardPage").style.display="none";
 
   window.scrollTo({
     top:0,
@@ -829,13 +1212,13 @@ function showHome(){
 }
 
 
-/* ================= LOGIN PAGE ================= */
-
 function showLogin(){
 
   document.getElementById("homePage").style.display="none";
 
   document.getElementById("authPage").style.display="flex";
+
+  document.getElementById("dashboardPage").style.display="none";
 
   showLoginForm();
 
@@ -847,13 +1230,13 @@ function showLogin(){
 }
 
 
-/* ================= REGISTER PAGE ================= */
-
 function showRegister(){
 
   document.getElementById("homePage").style.display="none";
 
   document.getElementById("authPage").style.display="flex";
+
+  document.getElementById("dashboardPage").style.display="none";
 
   showRegisterForm();
 
@@ -865,7 +1248,7 @@ function showRegister(){
 }
 
 
-/* ================= LOGIN TAB ================= */
+/* ================= AUTH TABS ================= */
 
 function showLoginForm(){
 
@@ -881,8 +1264,6 @@ function showLoginForm(){
 
 }
 
-
-/* ================= REGISTER TAB ================= */
 
 function showRegisterForm(){
 
@@ -906,10 +1287,10 @@ function registerUser(event){
   event.preventDefault();
 
   const name =
-    document.getElementById("registerName").value;
+    document.getElementById("registerName").value.trim();
 
   const email =
-    document.getElementById("registerEmail").value;
+    document.getElementById("registerEmail").value.trim();
 
   const password =
     document.getElementById("registerPassword").value;
@@ -945,7 +1326,7 @@ function loginUser(event){
   event.preventDefault();
 
   const email =
-    document.getElementById("loginEmail").value;
+    document.getElementById("loginEmail").value.trim();
 
   const password =
     document.getElementById("loginPassword").value;
@@ -961,8 +1342,12 @@ function loginUser(event){
     savedUser.password === password
   ){
 
-    document.getElementById("message").innerText =
-      "Login successful!";
+    localStorage.setItem(
+      "aploraLoggedIn",
+      "true"
+    );
+
+    openDashboard();
 
   }
 
@@ -976,188 +1361,50 @@ function loginUser(event){
 }
 
 
-/* ================= SERVICES DATA ================= */
+/* ================= DASHBOARD ================= */
 
-const services = {
+function openDashboard(){
 
-  instagram: [
+  const savedUser =
+    JSON.parse(localStorage.getItem("aploraUser"));
 
-    ["Instagram Followers","Fast delivery social growth service."],
 
-    ["Instagram Likes","Increase likes on your posts."],
+  document.getElementById("homePage").style.display="none";
 
-    ["Instagram Views","Boost video and reel views."],
+  document.getElementById("authPage").style.display="none";
 
-    ["Instagram Comments","Engagement service for posts."]
+  document.getElementById("dashboardPage").style.display="block";
 
-  ],
 
+  if(savedUser){
 
-  facebook: [
+    document.getElementById("customerName").innerText =
+      savedUser.name;
 
-    ["Facebook Followers","Grow your Facebook audience."],
+  }
 
-    ["Facebook Page Likes","Increase page likes."],
 
-    ["Facebook Post Likes","Boost post engagement."],
-
-    ["Facebook Video Views","Increase video views."]
-
-  ],
-
-
-  youtube: [
-
-    ["YouTube Subscribers","Grow your channel audience."],
-
-    ["YouTube Views","Increase video views."],
-
-    ["YouTube Likes","Boost video engagement."],
-
-    ["YouTube Comments","Engagement service for videos."]
-
-  ],
-
-
-  tiktok: [
-
-    ["TikTok Followers","Grow your TikTok audience."],
-
-    ["TikTok Likes","Increase likes on videos."],
-
-    ["TikTok Views","Boost video views."],
-
-    ["TikTok Shares","Increase video shares."]
-
-  ],
-
-
-  telegram: [
-
-    ["Telegram Members","Grow your Telegram community."],
-
-    ["Telegram Post Views","Increase post views."],
-
-    ["Telegram Reactions","Boost post reactions."],
-
-    ["Telegram Channel Members","Increase channel audience."]
-
-  ]
-
-};
-
-
-/* ================= SHOW PLATFORM ================= */
-
-function showPlatform(platform){
-
-  const list =
-    document.getElementById("serviceList");
-
-  const title =
-    document.getElementById("serviceTitle");
-
-
-  const platformNames = {
-
-    instagram:"Instagram",
-
-    facebook:"Facebook",
-
-    youtube:"YouTube",
-
-    tiktok:"TikTok",
-
-    telegram:"Telegram"
-
-  };
-
-
-  title.innerText =
-    platformNames[platform] + " Services";
-
-
-  list.innerHTML="";
-
-
-  services[platform].forEach(function(service){
-
-    const item =
-      document.createElement("div");
-
-    item.className="service-item";
-
-
-    item.innerHTML=`
-
-      <div class="service-info">
-
-        <h3>${service[0]}</h3>
-
-        <p>${service[1]}</p>
-
-      </div>
-
-      <button
-        class="order-btn"
-        onclick="orderService('${service[0]}')">
-
-        Order
-
-      </button>
-
-    `;
-
-
-    list.appendChild(item);
-
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
   });
 
+}
 
-  document.querySelectorAll(".platform")
-    .forEach(function(btn){
 
-      btn.classList.remove("active");
+/* ================= THREE DOT MENU ================= */
 
-    });
-
+function toggleMenu(){
 
   document
-    .getElementById(platform+"Platform")
-    .classList.add("active");
+    .getElementById("dropdownMenu")
+    .classList.toggle("show");
 
 }
 
 
-/* ================= ORDER ================= */
+function closeMenu(){
 
-function orderService(service){
-
-  alert(
-    service +
-    " ordering system will be connected soon."
-  );
-
-}
-
-
-/* ================= SCROLL ================= */
-
-function scrollToServices(){
-
-  document.getElementById("services")
-    .scrollIntoView({
-      behavior:"smooth"
-    });
-
-}
-
-
-/* ================= DEFAULT PLATFORM ================= */
-
-showPlatform("instagram");
-
-</script>
-
-</body>
-</html>
+  document
+    .getElementById("dropdownMenu")
+    .class
