@@ -1328,11 +1328,15 @@ function togglePassword(inputId, button){
 
   function showDashboard(){
 
-  document.getElementById("homePage").style.display="none";
+  function showDashboard(){
 
-  document.getElementById("authPage").style.display="none";
+document.getElementById("homePage").style.display="none";
 
-  document.getElementById("dashboardPage").style.display="block";
+document.querySelector("header").style.display="none";
+
+document.getElementById("authPage").style.display="none";
+
+document.getElementById("dashboardPage").style.display="block";
 
   window.scrollTo({
     top:0,
