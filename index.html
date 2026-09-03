@@ -724,7 +724,7 @@ footer{
 
   <div class="welcome-box">
 
-    <h2>Welcome, Customer 👋</h2>
+    <h2 id="welcomeCustomer">Welcome, Customer 👋</h2>
 
     <p>Your dashboard overview</p>
 
@@ -1408,6 +1408,12 @@ window.addEventListener("load", function(){
   }
 
 });
+  const user = JSON.parse(localStorage.getItem("aploraUser"));
+
+if(user && user.name){
+  document.getElementById("welcomeCustomer").innerText =
+    "Welcome, " + user.name + " 👋";
+      }
   
 </script>
 
