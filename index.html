@@ -1340,6 +1340,77 @@ function togglePassword(inputId, button){
 
   }
   
+  function handleGoogleCredential(response){
+
+  try{
+
+    const payload = JSON.parse(
+      atob(
+        response.credential
+          .split(".")[1]
+          .replace(/-/g,"+")
+          .replace(/_/g,"/")
+      )
+    );
+
+    const name = payload.name || "Google User";
+    const email = payload.email || "";
+
+    localStorage.setItem(
+      "aploraUser",
+      JSON.stringify({
+        name:name,
+        email:email,
+        password:"google-login"
+      })
+    );
+
+    showDashboard();
+
+  }catch(error){
+
+    document.getElementById("message").innerText =
+      "Google Login failed.";
+
+  }
+
+}
+
+
+window.addEventListener("load", function(){
+
+  if(
+    window.google &&
+    google.accounts &&
+    google.accounts.id
+  ){
+
+    google.accounts.id.initialize({
+
+      client_id:
+      "598179497770-or0fpqftmuv697km6mgmva32hfhcmr75.apps.googleusercontent.com",
+
+      callback:handleGoogleCredential
+
+    });
+
+    google.accounts.id.renderButton(
+
+      document.getElementById("googleLoginButton"),
+
+      {
+        theme:"outline",
+        size:"large",
+        text:"continue_with",
+        width:350
+      }
+
+    );
+
+  }
+
+});
+  
 </script>
 
 </body>
