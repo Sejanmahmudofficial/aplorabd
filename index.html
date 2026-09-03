@@ -819,12 +819,33 @@ footer{
 
         <label>Password</label>
 
-        <input
-          type="password"
-          id="loginPassword"
-          placeholder="Enter your password"
-          required>
+        <div style="position:relative;">
 
+  <input
+    type="password"
+    id="loginPassword"
+    placeholder="Enter your password"
+    required
+    style="padding-right:50px;">
+
+  <button
+    type="button"
+    onclick="togglePassword('loginPassword', this)"
+    style="
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      background:none;
+      border:none;
+      color:#aaa;
+      font-size:20px;
+      padding:5px;
+    ">
+    👁️
+  </button>
+
+        </div>
       </div>
 
 
@@ -1282,7 +1303,21 @@ function scrollToServices(){
 /* ================= DEFAULT PLATFORM ================= */
 
 showPlatform("instagram");
+function togglePassword(inputId, button){
 
+  const input = document.getElementById(inputId);
+
+  if(input.type === "password"){
+    input.type = "text";
+    button.innerText = "🙈";
+  }
+  else{
+    input.type = "password";
+    button.innerText = "👁️";
+  }
+
+  }
+  
 </script>
 
 </body>
